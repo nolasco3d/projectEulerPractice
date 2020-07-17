@@ -1,22 +1,20 @@
-let allMult = []
-let range = 100
-let multOf = [3,5]
+let allMult = [];
+const range = 1000;
+const multOf = [3, 5];
 
-const sumArr = (arr) => {
-    return console.log(arr.reduce((a, b) => a + b, 0))
-}
-const isMultOf = (n, m) => {
-    if (n >= m) {
-        return n % m > 0 ? false : true
-    }
-}
+const clearDuplicates = arr => {
+  const uniq = new Set(arr);
+  allMult = [...uniq];
+};
+const sumArr = arr => console.log(arr.reduce((a, b) => a + b, 0));
+const isMultOf = (n, m) => n >= m && n % m === 0;
 const resolveChallenge = () => {
-    multOf.forEach(mult => {
-        for (let i = 0; i < range; i++) {
-            isMultOf(i,mult) ? allMult.push(i) : false
-        }
-    });
-    sumArr(allMult)
-}
-
-resolveChallenge()
+  multOf.forEach(mult => {
+    for (let i = 0; i < range; i++) {
+      if (isMultOf(i, mult)) allMult.push(i);
+    }
+  });
+  clearDuplicates(allMult);
+  sumArr(allMult);
+};
+resolveChallenge();
