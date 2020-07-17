@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/nolasco3d/projectEulerPractice/issues"
   },
-  "homepage": "https://github.com/nolasco3d/projectEulerPractice#readme"
+  "homepage": "https://github.com/nolasco3d/projectEulerPractice#readme",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
 }
